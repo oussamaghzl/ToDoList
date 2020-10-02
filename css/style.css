@@ -1,0 +1,78 @@
+body{
+    margin: 0px 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: whitesmoke;
+
+}
+h1{
+    margin-top: 0px;
+    padding: 40px 0px;
+    border-left: solid 7px navy;
+    color: white;
+    text-align: left;
+    font-size: 50px;
+    background-color: teal;
+
+}
+h2{
+    font-size: 40px;
+}
+section{
+    background-color: white;
+    border-top: teal solid 4px;
+}
+
+input{
+    height: 45px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+button{
+    border: solid 0px white;
+
+}
+
+#nomDeTache{
+    font-size: 20px;
+}
+
+#Ajout{
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    background-color: #5d94fa;
+    border-radius: 30px;
+}
+#filtre{
+    text-align: right;
+    border-bottom: solid 2px whitesmoke;
+    margin: 10px 0px;
+}
+i{
+    color: white;
+    padding: 0px 15px;
+    text-align: right;
+}
+#filtre button{
+    height: 40px;
+    max-width: max-content;
+    font-size: 15px;
+    border-radius: 15px;    
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+.tache{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(187, 187, 187);
+    font-size: 20px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;    
+    margin: 10px 15px;
+}
