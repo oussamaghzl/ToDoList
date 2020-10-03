@@ -1,7 +1,7 @@
 body{
     margin: 0px 100px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: whitesmoke;
+    background-color: burlywood;
 
 }
 h1{
@@ -12,6 +12,7 @@ h1{
     text-align: left;
     font-size: 50px;
     background-color: teal;
+    border-radius: 20px;
 
 }
 h2{
@@ -20,6 +21,8 @@ h2{
 section{
     background-color: white;
     border-top: teal solid 4px;
+    border-radius: 10px;
+
 }
 
 input{
@@ -75,4 +78,22 @@ i{
     align-items: center;
     border-radius: 15px;    
     margin: 10px 15px;
+}
+
+.disparait{
+    display: none
+}
+
+/* .fa-check-circle{
+    text-align: right;
+}
+.fa-window-close{
+    text-align: right;
+} */
+
+#fini{
+    background-color: chartreuse;
+}
+#pasFini{
+
 }

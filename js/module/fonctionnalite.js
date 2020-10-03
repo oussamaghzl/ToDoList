@@ -1,9 +1,12 @@
+import { creationDiv, creationIconeEdit  } from '../module/Structure.js'
+
 let myBody = document.querySelector('body')
 let mySection = document.querySelector('section')
 
 let myInputCreation = document.querySelector('input')
 
 let nouvelleTache;
+
 
 
 let myDivAvecLesTaches = document.createElement('div')
@@ -16,33 +19,20 @@ let iconEdit;
 let iconCheck;
 let iconSuppr;
 
-
 myAjout.addEventListener('click', () => {
-    
+    if (myInputCreation.value == "" ) {
+        alert('Remplissez le champs !'); 
+    } else {
+        nouvelleTache = document.createElement('div')
+        nouvelleTache.className = 'tache'
 
-    nouvelleTache = document.createElement('div')
-    nouvelleTache.className = 'tache'
-    nouvelleTache.textContent = myInputCreation.value
-    
-    myDivAvecLesTaches.appendChild(nouvelleTache)
+        nouvelleTache.textContent = myInputCreation.value
 
-    stock = document.createElement('div')
-    nouvelleTache.appendChild(stock)
+        myDivAvecLesTaches.appendChild(nouvelleTache)
+        myDivAvecLesTaches.style = 'padding-bottom: 10px;padding-top: 10px;'
 
-    
-    iconEdit = document.createElement('i');
-    iconEdit.className = "fa fa-edit"
-    iconCheck = document.createElement('i');
-    iconCheck.className = "fa fa-check-square"
-    iconSuppr = document.createElement('i');
-    iconSuppr.className = "fa fa-trash-alt"
-    iconSuppr.style = 'color: red;'
-
-    stock.appendChild(iconEdit)
-    stock.appendChild(iconCheck)
-    stock.appendChild(iconSuppr)
-
+        creationDiv(stock, nouvelleTache, iconEdit, iconCheck, iconSuppr)
+    }
 
 })
-
 
