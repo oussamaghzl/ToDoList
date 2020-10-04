@@ -1,6 +1,6 @@
 body{
     margin: 0px 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: burlywood;
 
 }
@@ -10,13 +10,15 @@ h1{
     border-left: solid 7px navy;
     color: white;
     text-align: left;
-    font-size: 50px;
+    font-size: 40px;
     background-color: teal;
     border-radius: 20px;
 
 }
 h2{
-    font-size: 40px;
+    padding: 0px 50px;
+
+    font-size: 30px;
 }
 section{
     background-color: white;
@@ -29,11 +31,11 @@ input{
     height: 45px;
     width: 400px;
     margin-left: 20px;
+    font-size: 20px;
 }
 
 button{
-    border: solid 0px white;
-
+    background-color: rosybrown;
 }
 
 #nomDeTache{

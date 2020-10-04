@@ -24,6 +24,26 @@ let myAFaire = document.querySelector('#filtre button')
 let myTerminer = document.querySelectorAll('#filtre button')[1]
 let myTout = document.querySelectorAll('#filtre button')[2]
 
+myInputCreation.addEventListener('keypress', (e) => {
+    if (e.keyCode === 13) {
+        if (myInputCreation.value == "") {
+            alert('Remplissez le champs !');
+
+        } else {
+            nouvelleTache = document.createElement('div')
+            nouvelleTache.className = 'tache'
+
+            nouvelleTache.textContent = myInputCreation.value
+
+            myDivAvecLesTaches.appendChild(nouvelleTache)
+            myDivAvecLesTaches.style = 'padding-bottom: 10px;padding-top: 10px;'
+
+            creationDiv(stock, nouvelleTache, iconEdit, iconCheck, iconSuppr)
+
+
+        }
+    }
+})
 
 myAjout.addEventListener('click', () => {
     if (myInputCreation.value == "") {
@@ -40,7 +60,7 @@ myAjout.addEventListener('click', () => {
 
         creationDiv(stock, nouvelleTache, iconEdit, iconCheck, iconSuppr)
 
-        
+
     }
 
 })
@@ -50,7 +70,7 @@ myAjout.addEventListener('click', () => {
 
 let tab;
 
-myAFaire.addEventListener('click',()=>{
+myAFaire.addEventListener('click', () => {
     tab = [].slice.call(myDivAvecLesTaches.children)
     tab.forEach(element => {
 
@@ -60,11 +80,11 @@ myAFaire.addEventListener('click',()=>{
         } else {
             element.classList.remove("disparait");
         }
-        
+
     });
 })
 
-myTerminer.addEventListener('click',()=>{
+myTerminer.addEventListener('click', () => {
     tab = [].slice.call(myDivAvecLesTaches.children)
     tab.forEach(element => {
         if (element.classList == 'tache pasFini') {
@@ -72,14 +92,14 @@ myTerminer.addEventListener('click',()=>{
         } else {
             element.classList.remove("disparait");
         }
-    });  
+    });
 })
 
-myTout.addEventListener('click',()=>{
+myTout.addEventListener('click', () => {
     tab = [].slice.call(myDivAvecLesTaches.children)
     tab.forEach(element => {
         if (element.classList == 'tache fini disparait' || element.classList == 'tache pasFini disparait') {
             element.classList.remove("disparait");
         }
-    });  
+    });
 })
