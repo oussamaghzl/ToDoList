@@ -16,14 +16,16 @@ export let creationDiv = (stock, nouvelleTache, iconYes, iconAnn, input2Modif, i
     stock.appendChild(iconCheck)
     stock.appendChild(iconSuppr)
 
-
+    nouvelleTache.classList.add('pasFini')
 
     iconCheck.addEventListener('click', () => {
         if (a % 2 == 0) {
-            nouvelleTache.setAttribute('id', 'fini')
+            nouvelleTache.classList.add('fini')
+            nouvelleTache.classList.remove('pasFini')
             a++
         } else {
-            nouvelleTache.setAttribute('id', 'pasFini')
+            nouvelleTache.classList.remove('fini')
+            nouvelleTache.classList.add('pasFini')
             a++
         }
     })
@@ -37,6 +39,9 @@ export let creationDiv = (stock, nouvelleTache, iconYes, iconAnn, input2Modif, i
             nouvelleTache.remove()
         }
     })
+
+
+
 }
 
 export let creationIconeEdit = (stock, nouvelleTache, iconYes, iconAnn, input2Modif, iconEdit, iconCheck, iconSuppr, myInputCreation) => {
